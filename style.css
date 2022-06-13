@@ -19,8 +19,51 @@ header {
     text-align: center;
 }
 
+.nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 6px 20px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    border-radius: 20px;
+    transition: ease-out 0.3s;
+}
+
+.nav ul li a:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
 .filtro{
-    background-color: rgba(158, 134, 154, 0.5);
+    background-color: rgba(179, 157, 175, 0.596);
+    animation-name: cambioColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     position: absolute;
     top: 0;
     left: 0;
@@ -66,7 +109,6 @@ header .subtitulo {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*margin: 100px;*/
 }
 
 
@@ -114,4 +156,18 @@ svg{
     margin-left: 20px;
     margin-right: 20px;
     cursor: pointer;
+    height: 32px;
+    width: 32px;
 }	
+
+@keyframes cambioColor {
+    0% {
+        background-color: rgba(194, 164, 189, 0.836);
+    }
+    50% {
+        background-color: rgba(161, 192, 179, 0.808);
+    }
+    100% {
+        background-color: rgba(209, 224, 184, 0.774);
+    }
+}
